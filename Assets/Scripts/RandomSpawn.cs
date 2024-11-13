@@ -28,8 +28,10 @@ public class RandomSpawn : MonoBehaviour
             RandomTextAssigner textAssigner = instance.AddComponent<RandomTextAssigner>();
 
             // Find the Text components in the instantiated prefab
-            textAssigner.firstText = instance.GetComponentInChildren<Text>();
-            textAssigner.secondText = instance.GetComponentInChildren<Text>();
+
+            GameObject textParent =  instance.GetComponentInChildren<Canvas>().gameObject;
+            textAssigner.firstText = textParent.transform.GetChild(0).GetComponent<Text>();
+            textAssigner.secondText = textParent.transform.GetChild(1).GetComponent<Text>();
 
             // Assign random numbers ensuring uniqueness
             textAssigner.AssignRandomNumbers(usedNumbers);
