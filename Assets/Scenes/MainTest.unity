@@ -895,6 +895,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1688047240}
   m_LocalEulerAnglesHint: {x: -26, y: -20.127, z: -7.479}
+--- !u!1 &332103646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -791446163996568460, guid: bc1807992fe1c774e8530e0608c7fe85, type: 3}
+  m_PrefabInstance: {fileID: 687264684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &332103650
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332103646}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6254580501676837539, guid: bc1807992fe1c774e8530e0608c7fe85, type: 3}
 --- !u!1 &369044058
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +947,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369044058}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79f28c62ec67ab040b41fcc7289a3819, type: 3}
   m_Name: 
@@ -1257,6 +1284,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: -791446163996568460, guid: bc1807992fe1c774e8530e0608c7fe85, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bc1807992fe1c774e8530e0608c7fe85, type: 3}
       propertyPath: m_Name
       value: Phasmaphobia_Semi
@@ -1274,7 +1305,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: bc1807992fe1c774e8530e0608c7fe85, type: 3}
       insertIndex: -1
       addedObject: {fileID: 467616444}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -791446163996568460, guid: bc1807992fe1c774e8530e0608c7fe85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 332103650}
   m_SourcePrefab: {fileID: 100100000, guid: bc1807992fe1c774e8530e0608c7fe85, type: 3}
 --- !u!1 &691181269
 GameObject:
