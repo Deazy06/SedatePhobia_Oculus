@@ -32,13 +32,7 @@ public class RandomNumberSelector : MonoBehaviour
         PrintRandomNumbers();
     }
 
-    public void AssignRandomNumbers()
-    {
-        print("assignranodmnumbers");
-        firstText.text = list1[i].ToString();
-        secondText.text = list2.ToString();
-    }
-    private void PrintRandomNumbers()
+    public void PrintRandomNumbers()
     {
         // Shuffle the lists
         Shuffle(list1);
@@ -50,8 +44,9 @@ public class RandomNumberSelector : MonoBehaviour
         // Print random numbers from both lists
         for (int i = 0; i < minLength; i++)
         {
-            print(list1);
-            print(list2);
+            print("LALALALA");
+            firstText.text = list1[i].ToString();
+            secondText.text = list2[i].ToString();
         }
     }
 

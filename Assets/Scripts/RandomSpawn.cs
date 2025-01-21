@@ -41,7 +41,7 @@ public class RandomSpawn : MonoBehaviour
 
             //RandomTextAssigner textAssigner = instance.AddComponent<RandomTextAssigner>();
 
-            numberSelector.AssignRandomNumbers();
+            numberSelector.PrintRandomNumbers();
 
 /*
             GameObject textParent = instance.GetComponentInChildren<Canvas>().gameObject;
