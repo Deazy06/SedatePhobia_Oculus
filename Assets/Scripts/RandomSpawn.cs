@@ -36,13 +36,19 @@ public class RandomSpawn : MonoBehaviour
             Transform position = specifiedPositions[randomIndex];
 
             GameObject instance = Instantiate(originalObject, position.position, position.rotation);
-            RandomTextAssigner textAssigner = instance.AddComponent<RandomTextAssigner>();
+            
+            RandomNumberSelector numberSelector = instance.AddComponent<RandomNumberSelector>();
 
+            //RandomTextAssigner textAssigner = instance.AddComponent<RandomTextAssigner>();
+
+            numberSelector.AssignRandomNumbers();
+
+/*
             GameObject textParent = instance.GetComponentInChildren<Canvas>().gameObject;
             textAssigner.firstText = textParent.transform.GetChild(0).GetComponent<Text>();
             textAssigner.secondText = textParent.transform.GetChild(1).GetComponent<Text>();
 
-            textAssigner.AssignRandomNumbers(usedTextNumbers);
+            textAssigner.AssignRandomNumbers(usedTextNumbers); */
 
             yield return new WaitForSeconds(1.5f);
         }

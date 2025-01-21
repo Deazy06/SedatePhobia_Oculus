@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class RandomTextAssigner : MonoBehaviour
 {
-    public Text firstText; // Reference to the first Text component
+    /*public Text firstText; // Reference to the first Text component
     public Text secondText; // Reference to the second Text component
 
     public void AssignRandomNumbers(List<int> usedNumbers)
@@ -35,5 +35,6 @@ public class RandomTextAssigner : MonoBehaviour
         // Assign the random numbers to the text components
         firstText.text = firstNumber.ToString();
         secondText.text = secondNumber.ToString();
-    }
+    }*/
 }
+//testa använda list och ta siffror ur listan
