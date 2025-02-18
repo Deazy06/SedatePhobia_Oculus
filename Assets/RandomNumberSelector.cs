@@ -1,64 +1,67 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class RandomNumberSelector : MonoBehaviour
 {
-    private List<int> list1;
-    private List<int> list2;
+    private List<int> availableList1;
+    private List<int> availableList2;
 
-    public Text firstText; // Reference to the first Text component
-    public Text secondText; // Reference to the second Text component
+    private Text firstText;
+    private Text secondText;
 
     private void Start()
     {
-        // Initialize the lists
-        list1 = new List<int>();
-        list2 = new List<int>();
-
-        // Fill list1 with numbers 0-9
-        for (int i = 0; i <= 9; i++)
-        {
-            list1.Add(i);
-        }
-
-        // Fill list2 with numbers 1-8
-        for (int i = 1; i <= 8; i++)
-        {
-            list2.Add(i);
-        }
-
-        // Shuffle and print random numbers from both lists
-        PrintRandomNumbers();
+        InitializeLists();
     }
 
-    public void PrintRandomNumbers()
+    private void InitializeLists()
     {
-        // Shuffle the lists
-        Shuffle(list1);
-        Shuffle(list2);
-
-        // Get the minimum length to avoid index out of range
-        int minLength = Mathf.Min(list1.Count, list2.Count);
-
-        // Print random numbers from both lists
-        for (int i = 0; i < minLength; i++)
+        if (availableList1 == null || availableList1.Count == 0)
         {
-            print("LALALALA");
-            firstText.text = list1[i].ToString();
-            secondText.text = list2[i].ToString();
+            availableList1 = new List<int>();
+            for (int i = 0; i <= 9; i++)
+            {
+                availableList1.Add(i);
+            }
+        }
+
+        if (availableList2 == null || availableList2.Count == 0)
+        {
+            availableList2 = new List<int>();
+            for (int i = 1; i <= 8; i++)
+            {
+                availableList2.Add(i);
+            }
         }
     }
 
-    private void Shuffle(List<int> list)
+    public void SetTextComponents(Text text1, Text text2)
     {
-        for (int i = 0; i < list.Count; i++)
+        firstText = text1;
+        secondText = text2;
+
+        InitializeLists();
+        AssignUniqueNumbers();
+    }
+
+    private void AssignUniqueNumbers()
+    {
+        if (availableList1.Count == 0 || availableList2.Count == 0)
         {
-            int randomIndex = Random.Range(0, list.Count);
-            // Swap the elements
-            int temp = list[i];
-            list[i] = list[randomIndex];
-            list[randomIndex] = temp;
+            Debug.LogError("No unique numbers left!");
+            return;
         }
+
+        int index1 = Random.Range(0, availableList1.Count);
+        int selectedNumber1 = availableList1[index1];
+        availableList1.RemoveAt(index1);  // Remove used number
+
+        int index2 = Random.Range(0, availableList2.Count);
+        int selectedNumber2 = availableList2[index2];
+        availableList2.RemoveAt(index2);  // Remove used number
+
+        firstText.text = selectedNumber1.ToString();
+        secondText.text = selectedNumber2.ToString();
     }
 }

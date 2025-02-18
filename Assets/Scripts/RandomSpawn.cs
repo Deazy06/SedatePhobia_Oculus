@@ -8,10 +8,21 @@ public class RandomSpawn : MonoBehaviour
     public GameObject originalObject; // The prefab to instantiate
     public List<Transform> specifiedPositions; // List of specified positions to spawn the prefab
     private List<int> usedPositionIndices = new List<int>(); // Tracks used spawn positions
-    private List<int> usedTextNumbers = new List<int>(); // Tracks used numbers for text
+    private RandomNumberSelector numberSelector; // Reference to RandomNumberSelector
 
     void Start()
     {
+        // Find the RandomNumberSelector script from GameManagement
+        GameObject gameManager = GameObject.FindWithTag("GameManager"); // Make sure GameManagement has this tag
+        if (gameManager != null)
+        {
+            numberSelector = gameManager.GetComponent<RandomNumberSelector>();
+        }
+        else
+        {
+            Debug.LogError("GameManagement object not found! Make sure it has the tag 'GameManager'.");
+        }
+
         StartCoroutine(SpawnPrefabs());
     }
 
@@ -35,20 +46,20 @@ public class RandomSpawn : MonoBehaviour
             usedPositionIndices.Add(randomIndex);
             Transform position = specifiedPositions[randomIndex];
 
+            // Instantiate prefab
             GameObject instance = Instantiate(originalObject, position.position, position.rotation);
-            
-            RandomNumberSelector numberSelector = instance.AddComponent<RandomNumberSelector>();
 
-            //RandomTextAssigner textAssigner = instance.AddComponent<RandomTextAssigner>();
-
-            numberSelector.PrintRandomNumbers();
-
-/*
-            GameObject textParent = instance.GetComponentInChildren<Canvas>().gameObject;
-            textAssigner.firstText = textParent.transform.GetChild(0).GetComponent<Text>();
-            textAssigner.secondText = textParent.transform.GetChild(1).GetComponent<Text>();
-
-            textAssigner.AssignRandomNumbers(usedTextNumbers); */
+            // Get the text components from the spawned object
+            Text[] textComponents = instance.GetComponentsInChildren<Text>();
+            if (textComponents.Length >= 2 && numberSelector != null)
+            {
+                // Send the text components to the RandomNumberSelector script
+                numberSelector.SetTextComponents(textComponents[0], textComponents[1]);
+            }
+            else
+            {
+                Debug.LogError("Not enough Text components found in the prefab OR numberSelector is null!");
+            }
 
             yield return new WaitForSeconds(1.5f);
         }
