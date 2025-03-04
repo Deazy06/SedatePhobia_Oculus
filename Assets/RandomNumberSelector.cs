@@ -64,6 +64,9 @@ public class RandomNumberSelector : MonoBehaviour
         availableList2.RemoveAt(index2);  // Remove used number
 
         firstText.text = selectedNumber1.ToString();
-        secondText.text = selectedNumber2.ToString();
+        secondText.text = selectedNumber2.ToString(); 
+        
+        passcodeManager.AddUsedNumbers(selectedNumber1, selectedNumber2);
+        
     }
 }

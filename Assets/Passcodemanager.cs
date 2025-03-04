@@ -34,6 +34,7 @@ public class PasscodeManager : MonoBehaviour
         passcode.Clear();
         passcode.AddRange(usedNumbers);
         Shuffle(passcode);
+        print(string.Join(",", passcode));
     }
 
     // Shuffle a list using Fisher-Yates algorithm
