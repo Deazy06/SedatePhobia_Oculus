@@ -679,7 +679,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.880162, b: 0.81590426, a: 1}
   m_Intensity: 16
-  m_Range: 50
+  m_Range: 100
   m_SpotAngle: 74.5
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -870,8 +870,8 @@ GameObject:
   m_Component:
   - component: {fileID: 369044060}
   - component: {fileID: 369044059}
-  - component: {fileID: 369044061}
   - component: {fileID: 369044062}
+  - component: {fileID: 369044063}
   m_Layer: 0
   m_Name: GameManagment
   m_TagString: GameManager
@@ -920,18 +920,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &369044061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369044058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5103ef8b743923458134aa37c4048b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &369044062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,6 +930,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 194635cce816f7a44b488409f5374ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passcodeManager: {fileID: 369044063}
+--- !u!114 &369044063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369044058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ccddc8c45d9a904faec62b6b09fdebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &467616443

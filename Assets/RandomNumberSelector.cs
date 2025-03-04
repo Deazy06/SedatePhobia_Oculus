@@ -10,6 +10,8 @@ public class RandomNumberSelector : MonoBehaviour
     private Text firstText;
     private Text secondText;
 
+    public PasscodeManager passcodeManager;
+
     private void Start()
     {
         InitializeLists();

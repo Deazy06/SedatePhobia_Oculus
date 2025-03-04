@@ -61,7 +61,7 @@ public class RandomSpawn : MonoBehaviour
                 Debug.LogError("Not enough Text components found in the prefab OR numberSelector is null!");
             }
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(.5f);
         }
     }
 }
