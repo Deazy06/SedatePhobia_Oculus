@@ -1,75 +1,49 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class PasscodeManager : MonoBehaviour
 {
-    private List<int> usedNumbers; // List to store used numbers
-    private List<int> passcode; // List to store the passcode
+    public List<(int number1, int number2)> numberPairs; // Stores linked pairs
+    public List<int> passcode; // Final ordered passcode
 
-    private void Start()
+    private void Awake()
     {
-        usedNumbers = new List<int>();
+        numberPairs = new List<(int, int)>();
         passcode = new List<int>();
     }
 
-    // Call this method to add numbers to the used numbers list
+    // Call this method to add numbers
     public void AddUsedNumbers(int number1, int number2)
     {
-        if (!usedNumbers.Contains(number1))
+        Debug.Log($"Added Pair -> Number 1: {number1}, Number 2: {number2}");
+        numberPairs.Add((number1, number2));
+        if (numberPairs.Count == 8)
         {
-            usedNumbers.Add(number1);
+            Debug.Log("Generate");
+            GeneratePasscode();
         }
-
-        if (!usedNumbers.Contains(number2))
-        {
-            usedNumbers.Add(number2);
-        }
-
-        GeneratePasscode();
     }
 
-    // Shuffle the used numbers to create a passcode
-    private void GeneratePasscode()
+    // Generate the passcode based on sorted number2 values
+    public void GeneratePasscode()
     {
         passcode.Clear();
-        passcode.AddRange(usedNumbers);
-        Shuffle(passcode);
-        print(string.Join(",", passcode));
+
+        // Sort by number2 and extract number1 in that order
+        var sortedPairs = numberPairs.OrderBy(pair => pair.number2).ToList();
+        passcode = sortedPairs.Select(pair => pair.number1).ToList();
+
+        Debug.Log("Final Passcode Order: " + string.Join(", ", passcode));
     }
 
-    // Shuffle a list using Fisher-Yates algorithm
-    private void Shuffle(List<int> list)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            int randomIndex = Random.Range(0, list.Count);
-            // Swap the elements
-            int temp = list[i];
-            list[i] = list[randomIndex];
-            list[randomIndex] = temp;
-        }
-    }
-
-    // Method to check if the input matches the passcode
+    // Check if input matches the passcode order
     public bool CheckPasscode(List<int> input)
     {
-        if (input.Count != passcode.Count)
-        {
-            return false; // Input length must match passcode length
-        }
-
-        for (int i = 0; i < passcode.Count; i++)
-        {
-            if (input[i] != passcode[i])
-            {
-                return false; // Mismatch found
-            }
-        }
-
-        return true; // Passcode matches
+        return input.SequenceEqual(passcode);
     }
 
-    // Optional: Method to get the current passcode for debugging
+    // Get the current passcode
     public List<int> GetPasscode()
     {
         return new List<int>(passcode);

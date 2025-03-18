@@ -945,6 +945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccddc8c45d9a904faec62b6b09fdebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shuffledNumbers: 
+  sortedNumbers: 
+  passcode: 
 --- !u!1 &467616443
 GameObject:
   m_ObjectHideFlags: 0
