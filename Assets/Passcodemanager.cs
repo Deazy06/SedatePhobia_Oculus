@@ -1,11 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 public class PasscodeManager : MonoBehaviour
 {
     public List<(int number1, int number2)> numberPairs; // Stores linked pairs
     public List<int> passcode; // Final ordered passcode
+
+    public Text keypadText;
 
     private void Awake()
     {
