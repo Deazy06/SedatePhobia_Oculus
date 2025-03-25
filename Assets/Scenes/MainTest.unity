@@ -5719,7 +5719,7 @@ Transform:
   m_GameObject: {fileID: 229286584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.319, y: 0.977, z: 0.104}
+  m_LocalPosition: {x: -0.31899995, y: 1, z: 0.106}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5920,7 +5920,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 229286591}
 --- !u!1 &261883943
 GameObject:
@@ -6179,7 +6179,7 @@ Transform:
   m_GameObject: {fileID: 354525071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.322, y: 0.977, z: -0.074}
+  m_LocalPosition: {x: 0.3220002, y: 1, z: -0.074}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6380,7 +6380,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 354525078}
 --- !u!1 &369044058
 GameObject:
@@ -6701,6 +6701,10 @@ PrefabInstance:
       propertyPath: m_PokeFilter
       value: 
       objectReference: {fileID: 524685688}
+    - target: {fileID: 377291013443947822, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_ClampToMaxDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1811122272821274886, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.044999957
@@ -8036,7 +8040,7 @@ Transform:
   m_GameObject: {fileID: 792261640}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.007, y: 0.977, z: 0.319}
+  m_LocalPosition: {x: 0.007000111, y: 1, z: 0.316}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8237,7 +8241,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 792261647}
 --- !u!4 &802994479 stripped
 Transform:
@@ -8350,7 +8354,7 @@ Transform:
   m_GameObject: {fileID: 885400743}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.319, y: 0.977, z: -0.074}
+  m_LocalPosition: {x: -0.31899995, y: 1, z: -0.074}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8551,7 +8555,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 885400750}
 --- !u!1 &906785820
 GameObject:
@@ -9308,7 +9312,7 @@ Transform:
   m_GameObject: {fileID: 1074800339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.322, y: 0.977, z: 0.104}
+  m_LocalPosition: {x: 0.3220002, y: 1, z: 0.106}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9509,7 +9513,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 1074800346}
 --- !u!1 &1097516487
 GameObject:
@@ -9768,7 +9772,7 @@ Transform:
   m_GameObject: {fileID: 1185246458}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.007, y: 0.977, z: -0.074}
+  m_LocalPosition: {x: 0.007000111, y: 1, z: -0.074}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9969,7 +9973,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 1185246465}
 --- !u!1 &1225452367
 GameObject:
@@ -10275,7 +10279,7 @@ Transform:
   m_GameObject: {fileID: 1314114852}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.322, y: 0.977, z: 0.319}
+  m_LocalPosition: {x: 0.3220002, y: 1, z: 0.316}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10476,7 +10480,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 1314114859}
 --- !u!1 &1355428306 stripped
 GameObject:
@@ -10584,7 +10588,7 @@ Transform:
   m_GameObject: {fileID: 1395924846}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.319, y: 0.977, z: 0.319}
+  m_LocalPosition: {x: -0.31899995, y: 1, z: 0.316}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10785,7 +10789,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 1395924853}
 --- !u!1 &1420591862
 GameObject:
@@ -11604,7 +11608,7 @@ Transform:
   m_GameObject: {fileID: 1616175453}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.007, y: 0.977, z: 0.104}
+  m_LocalPosition: {x: 0.007000111, y: 1, z: 0.106}
   m_LocalScale: {x: -0.1459794, y: 0.90645885, z: -0.13576955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11805,7 +11809,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 0
-  m_MaxDistance: 0
+  m_MaxDistance: 0.5
   m_PokeFilter: {fileID: 1616175460}
 --- !u!1 &1624872957
 GameObject:
